@@ -11,7 +11,7 @@ public class Car extends Vehicle {
     private int seats;
 
     public Car (String name, int wheels, int doors, int gears, boolean isManual, String type, int seats) {
-        super();
+        super(name);
         //Hint: Car extends Vehicle
         this.currentGear=1;
         this.wheels=wheels;
@@ -20,10 +20,6 @@ public class Car extends Vehicle {
         this.isManual=isManual;
         this.type=type;
         this.seats=seats;
-    }
-
-    public Car() {
-
     }
 
     public void changeGear(int newGear){
@@ -35,15 +31,20 @@ public class Car extends Vehicle {
          move(newSpeed,newDirection);
         System.out.println("changeSpeed method called - The speed is changed to: " + newSpeed + ", and the direction is changed to: " + newDirection + " degrees");
     }
-
-    public int getCurrentGear() {
-        return currentGear;
+    public int getWheels() {
+        return wheels;
     }
 
-    public void setCurrentGear(int currentGear) {
-        this.currentGear = currentGear;
+    public void setWheels(int wheels) {
+        this.wheels = wheels;
+    }
+    public String getType() {
+        return type;
     }
 
+    public void setType(String type) {
+        this.type = type;
+    }
     public int getDoors() {
         return doors;
     }
@@ -68,6 +69,14 @@ public class Car extends Vehicle {
         isManual = manual;
     }
 
+    public int getCurrentGear() {
+        return currentGear;
+    }
+
+    public void setCurrentGear(int currentGear) {
+        this.currentGear = currentGear;
+    }
+
     public int getSeats() {
         return seats;
     }
@@ -76,19 +85,7 @@ public class Car extends Vehicle {
         this.seats = seats;
     }
 
-    public String getType() {
-        return type;
-    }
 
-    public void setType(String type) {
-        this.type = type;
-    }
 
-    public int getWheels() {
-        return wheels;
-    }
 
-    public void setWheels(int wheels) {
-        this.wheels = wheels;
-    }
 }
